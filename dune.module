@@ -1,0 +1,12 @@
+################################
+# Dune module information file #
+################################
+
+# Name of the module
+Module: myFacetCoupling_upload
+Version: 1.0
+Maintainer: lihang0614@whu.edu.cn
+# Required build dependencies
+Depends: dumux dune-foamgrid dune-alugrid
+# Optional build dependencies
+#Suggests:

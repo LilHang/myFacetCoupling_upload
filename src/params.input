@@ -1,0 +1,35 @@
+[Problem]
+EnableGravity = false
+
+[Grid]
+File = ./grids/domain_with_hole.msh
+
+[Matrix]
+Problem.Name = matrix
+SpatialParams.VanGenuchtenAlpha = 1e-3
+SpatialParams.VanGenuchtenN = 3
+SpatialParams.VanGenuchtenL = 0.5
+SpatialParams.Swr = 0.0
+SpatialParams.Snr = 0.0
+SpatialParams.Porosity = 0.4
+SpatialParams.Permeability = 1e-12
+
+[LowDim]
+Problem.Name = lowdim
+SpatialParams.Aperture = 1e-1
+SpatialParams.VanGenuchtenAlpha = 1e-3
+SpatialParams.VanGenuchtenN = 3
+SpatialParams.VanGenuchtenL = 0.5
+SpatialParams.Swr = 0.0
+SpatialParams.Snr = 0.0
+SpatialParams.Porosity = 0.4
+SpatialParams.Permeability = 1e-12
+
+[FacetCoupling]
+Xi = 1.0
+
+[Vtk]
+OutputName = test_md_facet_richards_gravity_xi1
+
+[Assembly]
+NumericDifference.BaseEpsilon = 1e10
